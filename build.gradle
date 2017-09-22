@@ -24,6 +24,13 @@ repositories {
 
 
 dependencies {
-	compile('org.springframework.boot:spring-boot-starter')
-	testCompile('org.springframework.boot:spring-boot-starter-test')
+    compile group: 'org.freemarker', name: 'freemarker', version: '2.3.23'
+    compile "org.codehaus.groovy:http-builder:0.4.0"
+    compile "org.codehaus.gpars:gpars:1.2.1"
+    compile group: 'org.codehaus.groovy', name: 'groovy-all', version: '2.4.12'
+    testCompile "org.spockframework:spock-core:0.7-groovy-2.0"
+    compile group: 'mysql', name: 'mysql-connector-java', version: '6.0.6'
+    testCompile group: 'com.h2database', name: 'h2', version: '1.4.196'
+    compile('org.springframework.boot:spring-boot-starter')
+	compile('org.springframework.boot:spring-boot-starter-test')
 }
