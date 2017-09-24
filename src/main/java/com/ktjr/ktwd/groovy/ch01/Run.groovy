@@ -11,6 +11,12 @@ class Run {
         def obj = new Object()
         println Hello(obj)
     }
+    /**
+     * 在groovy中会动态运行时判断传入的参数类型
+     * 根据实际的传参lei x
+     * @param java
+     * @return
+     */
     static String Hello(String java) {
         return "1 Hello ${java}"
     }
