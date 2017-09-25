@@ -6,7 +6,7 @@ package com.ktjr.ktwd.groovy.ch01
 class TestList {
 
     static void main(args){
-        test13()
+        test16()
     }
 
     static void test1(){
@@ -143,5 +143,57 @@ class TestList {
         println result
 
     }
+
+    static void test14(){
+
+        def list = [1,2,3]
+        assert list.first() == 1
+        assert list.head() == 1
+        assert list.tail() == [2,3]
+        assert list.last() == 3
+        assert list.count(2) == 1
+        assert list.max() == 3
+
+        assert list.min() == 1
+
+    }
+
+    static void test15(){
+        def store= ''
+        def list = ['a','b','c']
+        list.each {
+            store += it
+        }
+        println store
+
+        store = ''
+        list.reverseEach {
+            store += it
+        }
+        println store
+    }
+
+
+
+    def static quickSort(list){
+        if(list.size() < 2)
+            return list
+        def pivot = list[list.size().intdiv(2)]
+        def left = list.grep{it < pivot}
+        def middle = list.grep{it ==pivot}
+        def right = list.grep{it > pivot}
+        return quickSort(left) + middle + quickSort(right)
+    }
+
+    /**
+     * list在GDK中引入了了两种方便的方法asImmutable()和asSynchronized() 方法
+     */
+    static void test16(){
+        def res = quickSort([1,2,45,42,57,23,18] as List)
+        println( res)
+    }
+
+
+
 
 }

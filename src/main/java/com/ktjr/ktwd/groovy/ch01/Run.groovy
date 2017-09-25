@@ -34,4 +34,9 @@ class Run {
         def name = person?.name             //使用这种操作符避免了空指针异常
         assert name == null
     }
+
+
+
+
+
 }
