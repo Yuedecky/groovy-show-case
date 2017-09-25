@@ -8,7 +8,7 @@ class UseMaps {
 
     static void main(args){
 
-        test9()
+        test10()
     }
     static void test1(){
         def myMap = [a:1,b:2,c:3]
@@ -166,5 +166,27 @@ class UseMaps {
             list.remove(0)
         }
     }
+
+    static void test10(){
+        Map map = [a:1,b:2,c:3]
+        assert [a:2,b:4,c:6] == map.each{
+            it ->
+                it.value *= 2
+        }
+
+        Closure doubler = {key, value -> map[key] = value * 2 }
+        assert map.each (doubler) == [a:4,b:8,c:12]
+
+        doubler = this.&doubleMethod
+        map.each(doubler)
+        assert map == [a:8,b:16,c:24]
+
+    }
+
+
+    static def doubleMethod (entry){
+        entry.value = entry.value * 2
+    }
+
 
 }
