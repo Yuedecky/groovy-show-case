@@ -7,7 +7,7 @@ package com.ktjr.ktwd.groovy.ch01
 class Hello {
     /**
      *     1.所有的groovy class默认都是public的
-     *     2.所有的Groovy class都是继承于GroovyObject
+     *     2.所有的class（被Groovy编译的class）都是实现了于GroovyObject接口
      *     3.类的所有方法默认都是public的
      *     4.类的所有属性默认都是public的
      *
