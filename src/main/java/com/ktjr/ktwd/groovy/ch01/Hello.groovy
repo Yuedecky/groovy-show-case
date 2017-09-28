@@ -1,10 +1,17 @@
 package com.ktjr.ktwd.groovy.ch01
 
+import groovy.transform.TypeChecked
+
 /**
  * Created by forker
  * on 2017/9/22.
  */
+/**
+ * The checking process includes verifying that fields and properties exist at compile time
+ */
+@TypeChecked
 class Hello {
+    def name
     /**
      *     1.所有的groovy class默认都是public的
      *     2.所有的class（被Groovy编译的class）都是实现了于GroovyObject接口
