@@ -26,7 +26,6 @@ class Repeat {
     def str = 'Type is implicit'
     static void repeat(int n, String message){
 
-
         n.times {
             println message + str
         }
