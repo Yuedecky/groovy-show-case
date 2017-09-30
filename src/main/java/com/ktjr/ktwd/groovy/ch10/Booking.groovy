@@ -11,7 +11,7 @@ class Booking {
     String className
     Date start,end
 
-    def book(metting){
+    def book(def metting){
         [room: {
             name ->
                 [between: {
