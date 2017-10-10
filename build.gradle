@@ -24,6 +24,12 @@ repositories {
 
 
 dependencies {
+//    compile group: 'org.eclipse.jetty', name: 'jetty-server', version: '8.1.22.v20160922'
+//
+//    compile group: 'org.eclipse.jetty', name: 'jetty-servlet', version: '8.1.22.v20160922'
+
+//    compile 'javax.servlet:javax.servlet-api:3.0.1'
+
 	compile group: 'org.apache.ant', name: 'ant', version: '1.10.1'
 	compile group: 'org.gperfutils', name: 'gbench', version: '0.4.3-groovy-2.4'
 	compile group: 'org.freemarker', name: 'freemarker', version: '2.3.23'
@@ -34,5 +40,7 @@ dependencies {
     compile group: 'mysql', name: 'mysql-connector-java', version: '6.0.6'
     testCompile group: 'com.h2database', name: 'h2', version: '1.4.196'
     compile('org.springframework.boot:spring-boot-starter')
-	compile('org.springframework.boot:spring-boot-starter-test')
+    compile group: 'org.hsqldb', name: 'hsqldb', version: '2.3.4'
+
+    compile('org.springframework.boot:spring-boot-starter-test')
 }
