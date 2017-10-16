@@ -30,7 +30,8 @@ dependencies {
 //    compile group: 'org.eclipse.jetty', name: 'jetty-servlet', version: '8.1.22.v20160922'
 //    compile 'javax.servlet:javax.servlet-api:3.0.1'
 
-	compile group: 'org.apache.ant', name: 'ant', version: '1.10.1'
+    compile group: 'org.spockframework', name: 'spock-core', version: '1.1-groovy-2.4'
+    compile group: 'org.apache.ant', name: 'ant', version: '1.10.1'
 	compile group: 'org.gperfutils', name: 'gbench', version: '0.4.3-groovy-2.4'
 	compile group: 'org.freemarker', name: 'freemarker', version: '2.3.23'
     compile "org.codehaus.groovy:http-builder:0.4.0"
