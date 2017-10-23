@@ -10,10 +10,8 @@ import static groovy.io.FileVisitResult.SKIP_SUBTREE
 class FileMethod {
 
     static void main(String[] args) {
-//        String pathName = System.properties.'user.dir' + '/src/main/java/com/ktjr/ktwd/groovy/ch12/demo.txt'
-//        writeFile(pathName)
-
-        createDir("demo")
+        String pathName = System.properties.'user.dir' + '/src/main/java/com/ktjr/ktwd/groovy/ch12/demo.txt'
+        testEncode(pathName)
     }
 
     static def sumFile() {
@@ -85,5 +83,13 @@ class FileMethod {
         }
         assert tempDir.directorySize() == 22
         tempDir.deleteDir()
+    }
+
+    static def testEncode(String filename){
+        FileReader reader = new FileReader(filename)
+        println reader.getEncoding()
+        reader.eachLine {
+            println it
+        }
     }
 }
